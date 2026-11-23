@@ -28,7 +28,7 @@
 
 **What the study shows.** On the design problems, L-SHADE-SSR leads the audited swarm-intelligence algorithms and the feasibility ranking, while L-SHADE and jSO remain ahead on the penalized objective; an ablation shows which parts of the restart layer matter, and CEC2017, CEC2022, and BBOB act as generality checks. Losses are reported together with wins.
 
-**Keywords:** Constrained engineering optimization · Mechanical design optimization · Differential evolution · L-SHADE · Restart strategy · Ablation study
+**Keywords:** Constrained engineering optimization · Mechanical design optimization · Differential evolution · Restart strategy · Ablation study
 
 ## Contributions
 1. **An optimizer for constrained design that stays traceable to its parent.** Only a restart layer is added on top of the unchanged L-SHADE generation, together with a static penalty and the CEC2020 feasibility rule, so any change in behavior can be attributed to that layer.
