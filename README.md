@@ -4,11 +4,11 @@
 
 ### Success-history differential evolution with staggered sub-population restarts for constrained mechanical design optimization
 
-**Chau Van Van**<sup>1,2,&#42;</sup> · **Nguyen Minh Tuan**<sup>1</sup> · **Chau Khai Kien**<sup>3</sup> · **Phayung Meesad**<sup>2,&#42;</sup>
+**Chau Van Van**<sup>1,3,&#42;</sup> · **Nguyen Minh Tuan**<sup>1</sup> · **Chau Khai Kien**<sup>2</sup> · **Phayung Meesad**<sup>3,&#42;</sup>
 
 <sup>1</sup> Faculty of Information Technology, Posts and Telecommunications Institute of Technology, 11 Nguyen Dinh Chieu Street, Sai Gon Ward, Ho Chi Minh City 700000, Vietnam<br>
-<sup>2</sup> Department of Information Technology Management, Faculty of Information Technology and Digital Innovation, King Mongkut's University of Technology North Bangkok, 1518 Pracharat 1 Rd, Wongsawang, Bangsue, Bangkok 10800, Thailand<br>
-<sup>3</sup> Faculty of Artificial Intelligence, Asia University Viet Nam, No. 485 Le Quang Dinh, Ho Chi Minh City, Vietnam<br>
+<sup>2</sup> Faculty of Artificial Intelligence, Asia University Viet Nam, No. 485 Le Quang Dinh, Ho Chi Minh City, Vietnam<br>
+<sup>3</sup> Department of Information Technology Management, Faculty of Information Technology and Digital Innovation, King Mongkut's University of Technology North Bangkok, 1518 Pracharat 1 Rd, Wongsawang, Bangsue, Bangkok, 10800, Thailand<br>
 <sup>&#42;</sup> Corresponding authors: vancv@ptit.edu.vn, phayung.m@itd.kmutnb.ac.th
 
 *Engineering Applications of Artificial Intelligence* (submitted)
@@ -376,8 +376,8 @@ All benchmark suites are public: CEC2017 and CEC2022 through the official code o
 The article has been submitted to *Engineering Applications of Artificial Intelligence*. Until it is published, please cite this repository; see `CITATION.cff`.
 
 ## Contact
-**Chau Van Van**<sup>1,2,&#42;</sup> · **Nguyen Minh Tuan**<sup>1</sup> · **Chau Khai Kien**<sup>3</sup> · **Phayung Meesad**<sup>2,&#42;</sup><br>
+**Chau Van Van**<sup>1,3,&#42;</sup> · **Nguyen Minh Tuan**<sup>1</sup> · **Chau Khai Kien**<sup>2</sup> · **Phayung Meesad**<sup>3,&#42;</sup><br>
 <sup>1</sup> Faculty of Information Technology, Posts and Telecommunications Institute of Technology, 11 Nguyen Dinh Chieu Street, Sai Gon Ward, Ho Chi Minh City 700000, Vietnam<br>
-<sup>2</sup> Department of Information Technology Management, Faculty of Information Technology and Digital Innovation, King Mongkut's University of Technology North Bangkok, 1518 Pracharat 1 Rd, Wongsawang, Bangsue, Bangkok 10800, Thailand<br>
-<sup>3</sup> Faculty of Artificial Intelligence, Asia University Viet Nam, No. 485 Le Quang Dinh, Ho Chi Minh City, Vietnam<br>
+<sup>2</sup> Faculty of Artificial Intelligence, Asia University Viet Nam, No. 485 Le Quang Dinh, Ho Chi Minh City, Vietnam<br>
+<sup>3</sup> Department of Information Technology Management, Faculty of Information Technology and Digital Innovation, King Mongkut's University of Technology North Bangkok, 1518 Pracharat 1 Rd, Wongsawang, Bangsue, Bangkok, 10800, Thailand<br>
 <sup>&#42;</sup> Corresponding authors: vancv@ptit.edu.vn, phayung.m@itd.kmutnb.ac.th
