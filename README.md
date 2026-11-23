@@ -25,6 +25,8 @@
 ## Summary
 **Application domain.** Constrained design of mechanical components and systems: speed reducers, pressure vessels, springs, welded beams, gear trains and gear boxes, bearings, trusses, and a robot gripper, taken as the 19 problems RC15 to RC33 of the CEC2020 real-world constrained collection. In such tasks each candidate design may require a costly model evaluation, so the optimizer has a fixed evaluation budget and must return feasible designs reliably.
 
+**AI component.** The contribution on the artificial-intelligence side is a search-control layer for evolutionary optimization, built so that each of its parts can be switched off and measured on its own.
+
 **Method.** L-SHADE-SSR adds a restart layer to L-SHADE: the population is divided into sub-populations, each with its own success memory and its own progress check on a staggered schedule. A sub-population that stops improving is resampled near its best point, and one that keeps failing is redrawn over the full search box. Constraints are handled by a static penalty, and the competition's feasibility rule gives a second ranking.
 
 **What the study shows.** On the design problems, L-SHADE-SSR leads the audited swarm-intelligence algorithms and the feasibility ranking, while L-SHADE and jSO remain ahead on the penalized objective; an ablation shows which parts of the restart layer matter, and CEC2017, CEC2022, and BBOB act as generality checks. Losses are reported together with wins.
