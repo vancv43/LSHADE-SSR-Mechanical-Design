@@ -22,16 +22,19 @@
 [Abstract](#abstract) · [Contributions](#contributions) · [The algorithm](#the-algorithm) · [Benchmarks](#benchmarks) · [Results](#results) · [Reproducing the study](#reproducing-the-study) · [Repository layout](#repository-layout) · [Citation](#citation)
 
 ## Summary
-This repository holds the code, saved runs, and analysis scripts behind the article. L-SHADE-SSR adds a restart layer to L-SHADE: the population is divided into sub-populations, each with its own success memory and its own progress check on a staggered schedule. A sub-population that stops improving is resampled near its best point, and one that keeps failing is redrawn over the full search box. The main application is the set of 19 mechanical design problems, RC15 to RC33, of the CEC2020 real-world constrained collection, handled with a static penalty and ranked also by the competition's feasibility rule. CEC2017, CEC2022, and BBOB serve as generality checks, and an ablation removes or replaces each part of the restart layer. The repository reports the losses as well as the wins: on the penalized objective of the design problems, L-SHADE-SSR does not beat L-SHADE or jSO.
+**Application domain.** Constrained design of mechanical components and systems: speed reducers, pressure vessels, springs, welded beams, gear trains and gear boxes, bearings, trusses, and a robot gripper, taken as the 19 problems RC15 to RC33 of the CEC2020 real-world constrained collection. In such tasks each candidate design may require a costly model evaluation, so the optimizer has a fixed evaluation budget and must return feasible designs reliably.
 
-**Keywords:** Constrained optimization · Mechanical design · Differential evolution · L-SHADE · Restart strategy · Ablation study
+**Method.** L-SHADE-SSR adds a restart layer to L-SHADE: the population is divided into sub-populations, each with its own success memory and its own progress check on a staggered schedule. A sub-population that stops improving is resampled near its best point, and one that keeps failing is redrawn over the full search box. Constraints are handled by a static penalty, and the competition's feasibility rule gives a second ranking.
+
+**What the study shows.** On the design problems, L-SHADE-SSR leads the audited swarm-intelligence algorithms and the feasibility ranking, while L-SHADE and jSO remain ahead on the penalized objective; an ablation shows which parts of the restart layer matter, and CEC2017, CEC2022, and BBOB act as generality checks. Losses are reported together with wins.
+
+**Keywords:** Constrained engineering optimization · Mechanical design optimization · Differential evolution · L-SHADE · Restart strategy · Ablation study
 
 ## Contributions
-1. **A hybrid with a restart layer for sub-populations.** The L-SHADE generation is left untouched. On top of it, every sub-population keeps a private memory of successful F and CR values and runs its own clock. When a clock fires and no progress is seen, that group alone is resampled near its incumbent; a group that fails several times in a row is re-initialized uniformly, so resets never hit the whole population at once.
-2. **Audited baselines.** The 19 swarm algorithms were written from their original papers, and the evolutionary methods of the real-world comparison were ported from the authors' code or papers; `code/SWARM_AUDIT.md` and `code/RW_EVO_AUDIT.md` list every check and the library defects found.
-3. **Pre-registered tests.** The main tests and the RC22 to RC33 extension were fixed in dated protocols before their runs.
-4. **Ablation with replacement controls** that separates the sub-population restarts from a single sub-population and a generic restart.
-5. **Every loss reported.** L-SHADE-SSR trails L-SHADE and jSO from D = 30 on CEC2017, on the real-world problems by penalized objective, and the tuned L-SHADE on BBOB; these results are reported with the wins.
+1. **An optimizer for constrained design that stays traceable to its parent.** Only a restart layer is added on top of the unchanged L-SHADE generation, together with a static penalty and the CEC2020 feasibility rule, so any change in behavior can be attributed to that layer.
+2. **A checked comparison on 19 mechanical design problems.** The 19 swarm algorithms were coded from their original papers and the evolutionary rivals were ported from the authors' code or papers; `code/SWARM_AUDIT.md` and `code/RW_EVO_AUDIT.md` record every check and each library defect found. Code, saved runs, and audit notes are here so the comparison can be rerun on new design problems.
+3. **Evidence on which restart parts matter.** Ablation variants and replacement controls, each tested statistically, separate the sub-population restarts from a single sub-population and from a generic stagnation restart, giving a practical rule for adding restarts to an optimizer.
+4. **Guidance for choosing an optimizer.** Tests on CEC2022, a test on CEC2017 fixed in a dated plan before its runs, and the unseen BBOB suite after equal tuning indicate when success-history DE should be the default and when sub-population restarts are worth adding.
 
 ## The algorithm
 <p align="center"><img src="figures/png/Figure_1.png" width="100%" alt="Figure 1"></p>
